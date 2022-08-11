@@ -19,8 +19,8 @@ class CategoryController extends Controller
     public function postAddCategory(Request $request){
         if($request->isMethod('POST')){
             $validator = Validator::make($request->all(), [
-                'name' => 'required',
-                'description' => 'required',
+                'name'=>'required',
+                'description'=>'required',
             ]);
             if($validator->fails()){
                 return redirect()->back()
@@ -36,5 +36,30 @@ class CategoryController extends Controller
         }
     }
 
+    public function getEditCategory($id){
+        $data['cate']=Category::find($id);
+        return view('pages.editCategory',$data);
+    }
+    public function postEditCategory(Request $request,$id){
+        if($request->isMethod('POST')){
+            $validator=Validator::make($request->all(),[
+                'name'=>'required',
+                'description'=>'required',
+            ]);
 
+            if($validator->fails()){
+                return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+            }
+
+            $category=Category::find($id);
+            $category->name = $request->name;
+            $category->description = $request->description;
+            $category->save();
+            return redirect()->route('categories.index')->with('success', 'Edit Category Successfully!');
+        }
+    }
+
+    
 }
