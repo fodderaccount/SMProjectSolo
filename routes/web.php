@@ -1,6 +1,11 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Blueprint;
+use Illuminate\Support\Facades\Scheme;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +30,14 @@ Route::get('/profile', 'ProfileController@index')->name('profile');
 Route::put('/profile', 'ProfileController@update')->name('profile.update');
 
 Route::get('/about', function () {
-    return view('about');
+    return view('pages.about');
 })->name('about');
+
+
+
+Route::group(['prefix'=>'categories'], function(){
+    Route::get('/', [CategoryController::class, 'Catindex'])->name('categories.index');
+    Route::get('add/', [CategoryController::class, 'getAddCategory']);
+    Route::post('add/', [CategoryController::class, 'postAddCategory'])->name('categories.add');
+
+});

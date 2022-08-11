@@ -71,8 +71,58 @@
             </a>
         </li>
 
+        <!-- Nav Item - About -->
+        <li class="nav-item {{ Nav::isRoute('category') }}">
+            <a class="nav-link" href="{{ route('categories.index') }}">
+                <i class="fas fa-fw fa-hands-helping"></i>
+                <span>{{ __('Category') }}</span>
+            </a>
+        </li>            
+                
+        <!-- Nav Item - Users -->
+        <li class="nav-item {{ Nav::isRoute('users') }}">
+            <a class="nav-link" href="">
+                <i class="fas fa-fw fa-hands-helping"></i>
+                <span>{{ __('Users') }}</span>
+            </a>
+        </li>
+
+        <!-- Nav Item - Users -->
+        <li class="nav-item {{ Nav::isRoute('product') }}">
+            <a class="nav-link" href="">
+                <i class="fas fa-fw fa-hands-helping"></i>
+                <span>{{ __('Product') }}</span>
+            </a>
+        </li>
+
         <!-- Divider -->
-        <hr class="sidebar-divider d-none d-md-block">
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Addons
+    </div>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+            aria-expanded="true" aria-controls="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Pages</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Login Screens:</h6>
+                <a class="collapse-item" href="login.html">Login</a>
+                <a class="collapse-item" href="register.html">Register</a>
+                <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+               
+            </div>
+        </div>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
 
         <!-- Sidebar Toggler (Sidebar) -->
         <div class="text-center d-none d-md-inline">
