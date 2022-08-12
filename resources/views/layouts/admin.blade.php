@@ -89,7 +89,7 @@
 
         <!-- Nav Item - Users -->
         <li class="nav-item {{ Nav::isRoute('product') }}">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="{{route('products.index')}}">
                 <i class="fas fa-fw fa-hands-helping"></i>
                 <span>{{ __('Product') }}</span>
             </a>
