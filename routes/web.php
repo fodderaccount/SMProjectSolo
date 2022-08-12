@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Scheme;
 use Illuminate\Support\Facades\Blueprint;
 use App\Http\Controllers\CategoryController;
-
+use App\Http\Controllers\ClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +22,8 @@ use App\Http\Controllers\CategoryController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/homepage', 'ClientController@index')->name('homepage');
+
 
 Auth::routes();
 

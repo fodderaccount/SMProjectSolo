@@ -1,36 +1,13 @@
-<!-- header section starts  -->
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Pizza. </title>
 
-<header class="header">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-    <section class="flex">
- 
-       <a href="home" class="logo">Pizza.</a>
- 
-       <nav class="navbar">
-          <a href="home">home</a>
-          <div class="dropdown">
-            <button class="dropbtn"><a>category</a></button>
-            <div class="category-content">
-              <a href="#">italian pizza</a>
-              <a href="#">american pizza</a>
-              <a href="#">german pizza</a>
-            </div>
-          </div>
-          <a href="about">about</a>
-          <a href="menu">menu</a>
-          <a href="order">order</a>
-          <a href="faq">faq</a>
-       </nav>
- 
-       <div class="icons">
-          <div id="menu-btn" class="fas fa-bars"></div>
-          <div id="user-btn" class="fas fa-user"></div>
-          <div id="order-btn" class="fas fa-box"></div>
-          <div id="cart-btn" class="fas fa-shopping-cart"><span>(4)</span></div>
-       </div>
- 
-    </section>
- 
- </header>
- 
- <!-- header section ends -->
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="client/css/style.css">
+
+</head>
