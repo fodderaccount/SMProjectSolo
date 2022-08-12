@@ -44,3 +44,12 @@ Route::group(['prefix'=>'categories'], function(){
     Route::post('edit/{id}',[CategoryController::class,'postEditCategory'])->name('categories.edit');
     Route::get('delete/{id}',[CategoryController::class,'deleteCategory']);
 });
+
+Route::group(['prefix'=>'products'], function(){
+    Route::get('/', [ProductController::class, 'prodindex'])->name('products.index');
+    Route::get('add/', [ProductController::class, 'getAddProduct']);
+    Route::post('add/', [ProductController::class, 'postAddProduct'])->name('products.add');
+    Route::get('edit/{id}', [ProductController::class, 'getEditProduct']);
+    Route::post('edit/{id}', [ProductController::class, 'postEditProduct'])->name('products.edit');
+    Route::get('delete/{id}', [ProductController::class, 'deleteProduct']);
+});
