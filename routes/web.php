@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\CategoryController;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Blueprint;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Scheme;
+use Illuminate\Support\Facades\Blueprint;
+use App\Http\Controllers\CategoryController;
 
 
 /*
@@ -39,5 +40,7 @@ Route::group(['prefix'=>'categories'], function(){
     Route::get('/', [CategoryController::class, 'Catindex'])->name('categories.index');
     Route::get('add/', [CategoryController::class, 'getAddCategory']);
     Route::post('add/', [CategoryController::class, 'postAddCategory'])->name('categories.add');
-
+    Route::get('edit/{id}',[CategoryController::class,'getEditCategory']);
+    Route::post('edit/{id}',[CategoryController::class,'postEditCategory'])->name('categories.edit');
+    Route::get('delete/{id}',[CategoryController::class,'deleteCategory']);
 });
