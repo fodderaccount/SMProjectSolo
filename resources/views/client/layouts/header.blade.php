@@ -1,36 +1,14 @@
-<!-- header section starts  -->
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Pizza. </title>
 
-<header class="header">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="client/css/style.css">
 
-    <section class="flex">
- 
-       <a href="home" class="logo">Pizza.</a>
- 
-       <nav class="navbar">
-          <a href="home">home</a>
-          <div class="dropdown">
-            <button class="dropbtn"><a>category</a></button>
-            <div class="category-content">
-              <a href="#">italian pizza</a>
-              <a href="#">american pizza</a>
-              <a href="#">german pizza</a>
-            </div>
-          </div>
-          <a href="about">about</a>
-          <a href="menu">menu</a>
-          <a href="order">order</a>
-          <a href="faq">faq</a>
-       </nav>
- 
-       <div class="icons">
-          <div id="menu-btn" class="fas fa-bars"></div>
-          <div id="user-btn" class="fas fa-user"></div>
-          <div id="order-btn" class="fas fa-box"></div>
-          <div id="cart-btn" class="fas fa-shopping-cart"><span>(4)</span></div>
-       </div>
- 
-    </section>
- 
- </header>
- 
- <!-- header section ends -->
+</head>
