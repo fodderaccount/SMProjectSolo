@@ -5,7 +5,7 @@
 	<div class="col-xs-12 col-md-12 col-lg-12">
 		
 		<div class="panel panel-primary">
-			<div class="panel-heading">Product List</div>
+			<div class="panel-heading"><h1>Product List</h1></div>
                 @if ($message=Session::get('success'))
                     <div class="alert alert-success">
                         <p>{{ $message }}</p>
@@ -39,8 +39,8 @@
 									<td>{{$value -> description}}</td>
 									<td>{{$value -> category->name}}</td>
 									<td>
-										<a href="products/edit/{{ $value -> id }}" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i>Edit</a>
-										<a href="products/delete/{{$value -> id}}" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
+										<a href="{{route('products.edit', $value->id)}}" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i>Edit</a>
+										<a href="{{route('products.delete', $value->id)}}" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
 									</td>
 								</tr>
 							</tbody>
