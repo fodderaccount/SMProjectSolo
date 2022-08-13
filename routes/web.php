@@ -6,8 +6,14 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Scheme;
 use Illuminate\Support\Facades\Blueprint;
 use App\Http\Controllers\CategoryController;
+
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\SliderController;
+
+use App\Http\Controllers\ProductController;
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,6 +53,7 @@ Route::group(['prefix'=>'categories'], function(){
     Route::get('delete/{id}',[CategoryController::class,'deleteCategory']);
 });
 
+
 Route::group(['prefix'=>'sliders'], function(){
     Route::get('/', [SliderController::class, 'index'])->name('sliders.index');
     Route::get('add/', [SliderController::class, 'getAddSlider']);
@@ -54,4 +61,13 @@ Route::group(['prefix'=>'sliders'], function(){
     Route::get('edit/{id}',[SliderController::class,'getEditSlider']);
     Route::post('edit/{id}',[SliderController::class,'postEditSlider'])->name('sliders.edit');
     Route::get('delete/{id}',[SliderController::class,'deleteSlider']);
+
+Route::group(['prefix'=>'products'], function(){
+    Route::get('/', [ProductController::class, 'Prodindex'])->name('products.index');
+    Route::get('add/', [ProductController::class, 'getAddProduct']);
+    Route::post('add/', [ProductController::class, 'postAddProduct'])->name('products.add');
+    Route::get('edit/{id}', [ProductController::class, 'getEditProduct']);
+    Route::post('edit/{id}', [ProductController::class, 'postEditProduct'])->name('products.edit');
+    Route::get('delete/{id}', [ProductController::class, 'deleteProduct'])->name('products.delete');
+
 });
