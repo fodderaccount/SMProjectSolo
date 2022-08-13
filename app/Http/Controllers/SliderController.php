@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\BD;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Slider;
+use Illuminate\Support\Facades\File;
 
 class SliderController extends Controller
 {
@@ -18,53 +19,58 @@ class SliderController extends Controller
         return view('pages.addSlider');
     }
     public function postAddSlider(Request $request){
-        if($request->isMethod('POST')){
-            $validator = Validator::make($request->all(), [
-                'name'=>'required',
-                'description'=>'required',
-            ]);
-            if($validator->fails()){
-                return redirect()->back()
-                ->withErrors($validator)
-                ->withInput();
-            }
-
-            $slider = new Slider;
-            $slider->name = $request->name;
-            $slider->description = $request->description;
-            $slider->save();
-            return redirect()->route('categories.index')->with('success', 'Add New Slider Successfully!');
+        $slider=new Slider();
+        if($request->hasFile('image'))
+        {
+            $file=$request->file('image');
+            $ext=$file->getClientOriginalExtension();
+            $filename=time().'.'.$ext;
+            $file->move('uploads/img/', $filename);
+            $slider->image=$filename;
         }
+        
+        $slider->title=$request->input('title');
+        
+        $slider->save();
+        return redirect()->route('sliders.index')->with('success', 'Add New Slider Successfully!');     
     }
 
     public function getEditSlider($id){
-        $data['cate']=Slider::find($id);
+        $data['slider']=Slider::find($id);
         return view('pages.editSlider',$data);
     }
     public function postEditSlider(Request $request,$id){
-        if($request->isMethod('POST')){
-            $validator=Validator::make($request->all(),[
-                'name'=>'required',
-                'description'=>'required',
-            ]);
-
-            if($validator->fails()){
-                return redirect()->back()
-                ->withErrors($validator)
-                ->withInput();
+        $slider=Slider::find($id);
+        if($request->hasFile('image'))
+        {
+            $path='uploads/img/'.$slider->image;
+            if(File::exists($path))
+            {
+                File::delete($path);
             }
 
-            $slider=Slider::find($id);
-            $slider->name = $request->name;
-            $slider->description = $request->description;
-            $slider->save();
-            return redirect()->route('categories.index')->with('success', 'Edit Slider Successfully!');
+            $file=$request->file('image');                
+            $ext=$file->getClientOriginalExtension();
+            $filename=time().'.'.$ext;
+            $file->move('uploads/img/', $filename);
+            $slider->image=$filename;
+            
         }
+            
+        $slider->title=$request->input('title');
+        
+        $slider->save();
+        return redirect()->route('sliders.index')->with('success', 'Slider Updated Successfully!');
     }
 
     public function deleteSlider($id){
-        $slider=Slider::find($id);
+        $slider =Slider::find($id);
+        $path = 'uploads/img/'.$slider->image;
+        if(File::exists($path))
+        {
+            File::delete($path);
+        }
         $slider->delete();
-        return back();
+        return redirect()->route('sliders.index')->with('success', 'Slider Deleted Successfully!');
     }
 }

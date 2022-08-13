@@ -60,8 +60,8 @@ Route::group(['prefix'=>'sliders'], function(){
     Route::post('add/', [SliderController::class, 'postAddSlider'])->name('sliders.add');
     Route::get('edit/{id}',[SliderController::class,'getEditSlider']);
     Route::post('edit/{id}',[SliderController::class,'postEditSlider'])->name('sliders.edit');
-    Route::get('delete/{id}',[SliderController::class,'deleteSlider']);
-
+    Route::get('delete/{id}',[SliderController::class,'deleteSlider'])->name('sliders.delete');
+});
 Route::group(['prefix'=>'products'], function(){
     Route::get('/', [ProductController::class, 'Prodindex'])->name('products.index');
     Route::get('add/', [ProductController::class, 'getAddProduct']);
