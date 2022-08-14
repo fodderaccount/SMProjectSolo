@@ -26,7 +26,7 @@
 
 
 
-@include('client.layouts.navbar')
+
 <!-- header section ends -->
 
 
