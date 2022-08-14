@@ -94,6 +94,12 @@
                 <span>{{ __('Product') }}</span>
             </a>
         </li>
+        <li class="nav-item {{ Nav::isRoute('slider') }}">
+            <a class="nav-link" href="{{route('sliders.index')}}">
+                <i class="fas fa-fw fa-hands-helping"></i>
+                <span>{{ __('Slider') }}</span>
+            </a>
+        </li>
 
         <!-- Divider -->
     <hr class="sidebar-divider">
