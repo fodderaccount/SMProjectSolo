@@ -9,12 +9,12 @@
     <h1 class="heading">our menu</h1>
  
     <div class="box-container">
- 
+
        <div class="box">
           <div class="price">$<span>2</span>/-</div>
           <img src="client/images/pizza-1.jpg" alt="">
           <div class="name">pizza 1</div>
-          <form action="" method="post">
+          <form action="{{ route('add.to.cart') }}" method="post">
             @csrf
 
              <input type="number" min="1" max="100" value="1" class="quantity" name="quantity">
@@ -86,7 +86,7 @@
           <div class="price">$<span>3</span>/-</div>
           <img src="client/images/pizza-8.jpg" alt="">
           <div class="name">pizza 8</div>
-          <form action="" method="post">
+          <form action="{{ route('add.to.cart') }}" method="post">
              <input type="number" min="1" max="100" value="1" class="qty" name="qty">
              <input type="submit" value="add to cart" name="add_to_cart" class="btn">
           </form>
