@@ -15,7 +15,9 @@
           <img src="client/images/pizza-1.jpg" alt="">
           <div class="name">pizza 1</div>
           <form action="" method="post">
-             <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            @csrf
+
+             <input type="number" min="1" max="100" value="1" class="quantity" name="quantity">
              <input type="submit" value="add to cart" name="add_to_cart" class="btn">
           </form>
        </div>

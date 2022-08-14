@@ -10,5 +10,6 @@ class FrontendController extends Controller
     {
         return view('client.index');
     }
+      
     
 }
