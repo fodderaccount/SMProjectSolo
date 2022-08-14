@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Scheme;
 use Illuminate\Support\Facades\Blueprint;
 use App\Http\Controllers\CategoryController;
 
-use App\Http\Controllers\ClientController;
+
 use App\Http\Controllers\SliderController;
 
 use App\Http\Controllers\ProductController;

@@ -8,7 +8,7 @@ class FrontendController extends Controller
 {
     public function index()
     {
-        return view('client.pages.index');
+        return view('client.index');
     }
     
 }
