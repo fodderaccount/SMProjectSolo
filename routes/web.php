@@ -11,6 +11,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\SliderController;
 
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\FrontendController;
 
 
 
@@ -25,10 +26,14 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/', function () {
+/*Route::group(['prefix'=>'client'], function(){*/
+    Route::get('/', [FrontendController::class, 'index'])->name('client.index');
+    Route::get('/login', [LoginController::class, 'authenticated'])->name('login');
+
+
+/*Route::get('/', function () {
     return view('welcome');
-});
-Route::get('/homepage', 'ClientController@index')->name('homepage');
+});*/
 
 
 Auth::routes();
