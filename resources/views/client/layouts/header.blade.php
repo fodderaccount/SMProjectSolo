@@ -23,10 +23,10 @@
        </nav>
  
        <div class="icons">
-          <div id="menu-btn" class="fas fa-bars"></div>
-          <div id="user-btn" class="fas fa-user"></div>
-          <div id="order-btn" class="fas fa-box"></div>
-          <div id="cart-btn" class="fas fa-shopping-cart"><span>(4)</span></div>
+          <a id="menu-btn" class="fas fa-bars"></a>
+          <a class="fas fa-user" href="{{route('login')}}"></a>
+          <a href="#" class="fas fa-box"></a>
+          <a href="#" class="fas fa-shopping-cart"></a>
        </div>
  
     </section>
