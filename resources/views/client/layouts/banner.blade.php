@@ -1,7 +1,9 @@
 <div class="home-bg">
+
    <section class="home" id="home">
+
       <div class="slide-container">
- 
+
          <div class="slide active">
             <div class="image">
                <img src="client/images/home-img-1.png" alt="">
@@ -12,7 +14,7 @@
                <div class="fas fa-angle-right" onclick="next()"></div>
             </div>
          </div>
- 
+
          <div class="slide">
             <div class="image">
                <img src="client/images/home-img-2.png" alt="">
@@ -23,7 +25,7 @@
                <div class="fas fa-angle-right" onclick="next()"></div>
             </div>
          </div>
- 
+
          <div class="slide">
             <div class="image">
                <img src="client/images/home-img-3.png" alt="">
@@ -34,9 +36,9 @@
                <div class="fas fa-angle-right" onclick="next()"></div>
             </div>
          </div>
- 
+
       </div>
- 
+
    </section>
- 
+
 </div>

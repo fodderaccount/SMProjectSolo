@@ -12,8 +12,7 @@ use App\Http\Controllers\SliderController;
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\FrontendController;
-
-
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -84,3 +83,12 @@ Route::group(['prefix'=>'products'], function(){
     Route::get('delete/{id}', [ProductController::class, 'deleteProduct'])->name('products.delete');
 
 });
+Route::group(['prefix'=>'users'], function(){
+    Route::get('/', [UserController::class, 'index'])->name('users.index');
+    Route::get('edit/{id}',[UserController::class,'getEditUser']);
+    Route::post('edit/{id}',[UserController::class,'postEditUser'])->name('users.edit');
+    
+    Route::get('delete/{id}',[UserController::class,'deleteUser'])->name('users.delete');
+
+});
+
