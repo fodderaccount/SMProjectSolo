@@ -8,7 +8,7 @@
     <div class="container">
  
        <div class="row">
-        
+
             <div class="col-md-4">
                 <img src="{{asset('uploads/img/'.$products->image)}}" class="W-100" alt="">
             </div> 

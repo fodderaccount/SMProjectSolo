@@ -33,6 +33,7 @@ class FrontendController extends Controller
         $products =Product::find($id);
         return view('client.detail', compact('products'));
     } 
+
     public function about()
     {
         return view('client.about');

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -17,6 +18,7 @@ use App\Http\Controllers\UserController;
 
     Route::get('/', [FrontendController::class, 'index'])->name('client.index');  
     Route::get('viewCategory/{name}',[FrontendController::class, 'viewCategory'])->name('client.category');
+
     Route::get('detail/{id}', [FrontendController::class, 'detail'])->name('client.detail');
     Route::get('/about.', [FrontendController::class, 'about'])->name('client.about');
     Route::get('/menu', [FrontendController::class, 'menu'])->name('client.menu');
@@ -67,3 +69,8 @@ Route::group(['prefix'=>'users'], function(){
     Route::get('delete/{id}',[UserController::class,'deleteUser'])->name('users.delete');
 });
 
+ 
+Route::get('cart', [CartController::class, 'cart'])->name('cart');
+Route::get('add-to-cart/{id}', [CartController::class, 'addToCart'])->name('add.to.cart');
+Route::patch('update-cart', [CartController::class, 'update'])->name('update.cart');
+Route::delete('remove-from-cart', [CartController::class, 'remove'])->name('remove.from.cart');

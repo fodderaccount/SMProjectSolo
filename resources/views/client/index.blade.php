@@ -2,7 +2,9 @@
 
 @section('content')
 <!-- menu section starts  -->
+
 <section id="menu" class="menu">
+
    <h1 class="heading">all Pizza</h1>
 
    <div class="container">
@@ -11,6 +13,7 @@
          @foreach ($product as $prod)
          <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="card-p-2">
+
                <a href="{{url('detail/'.$prod->id)}}" style="text-decoration: none">
                   <div class="price">$<span>{{$prod->price}}</span></div>
                   <img src="uploads/img/{{$prod->image}}" alt="">
