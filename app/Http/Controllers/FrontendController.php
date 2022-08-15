@@ -14,7 +14,6 @@ class FrontendController extends Controller
 
         return view('client.index', compact('product'));
     }
-    
     public function viewCategory($name)
     {
         $category=Category::all();
@@ -29,15 +28,20 @@ class FrontendController extends Controller
             return redirect('/');
         }
     }
-
-    
+    public function detail($id)
+    {
+        $products =Product::find($id);
+        return view('client.detail', compact('products'));
+    } 
     public function about()
     {
         return view('client.about');
     }
     public function menu()
     {
-        return view('client.menu');
+        $product = Product::all();
+
+        return view('client.menu', compact('product'));
     }
     public function order()
     {
@@ -47,6 +51,4 @@ class FrontendController extends Controller
     {
         return view('client.faq');
     }
-      
-    
 }
