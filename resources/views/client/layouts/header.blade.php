@@ -4,10 +4,10 @@
 
     <section class="flex">
  
-       <a href="home" class="logo">Pizza.</a>
+       <a href="{{route('client.index')}}" class="logo">Pizza.</a>
  
        <nav class="navbar">
-          <a href="home">home</a>
+          <a href="{{route('client.index')}}">home</a>
           <div class="dropdown">
             <button class="dropbtn"><a>category</a></button>
             <div class="category-content">
@@ -16,10 +16,10 @@
               <a href="#">german pizza</a>
             </div>
           </div>
-          <a href="about">about</a>
-          <a href="menu">menu</a>
-          <a href="order">order</a>
-          <a href="faq">faq</a>
+          <a href="{{route('client.about')}}">about</a>
+          <a href="{{route('client.menu')}}">menu</a>
+          <a href="{{route('client.order')}}">order</a>
+          <a href="{{route('client.faq')}}">faq</a>
        </nav>
  
        <div class="icons">

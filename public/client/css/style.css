@@ -89,6 +89,9 @@ section{
    justify-content: space-between;
    position: relative;
 }
+.header .flex a{
+   text-decoration: none;
+}
 
 .header .flex .logo{
    font-size: 2.5rem;
@@ -99,6 +102,7 @@ section{
    margin:0 1rem;
    font-size: 2.2rem;
    color:var(--black);
+   
 }
 
 .header .flex .navbar a:hover{
@@ -282,16 +286,146 @@ section{
    font-size: 1.6rem;
    color:var(--light-color);
 }
-
-.menu .box-container{
+/*.product{
    display: grid;
-   grid-template-columns: repeat(auto-fit, 35rem);
+   gap:1.5rem;
+   
+   justify-content: center;
+}
+
+.product .card{
+   border: none;
+   border-radius: 0;
+   cursor: pointer;
+   
+}
+.product .card-body{
+   border: 1px;
+   background-color: var(--white);
+   border-radius: .5rem;
+   padding: 2rem;
+   text-align: center;
+   box-shadow: var(--box-shadow);
+   position: relative;
+
+}
+.name{
+   font-weight: 1000;
+   margin: 0;
+   color: var(--black);
+}
+
+
+.product .card-body .price{ 
+   background-color: var(--black);
+   border-radius: .5rem;
+   padding:.5rem 1rem;
+   font-size: 1.7rem;
+   color:var(--white);
+   position: absolute;
+   top:1rem; left:1rem;
+}
+.product .card-body .price span{
+   font-size: 2.5rem;
+}
+.product .card-body .name{
+   font-size: 2rem;
+   color:var(--black);
+   margin:.5rem 0;
+}
+img{
+   max-width: 100%;
+   height: auto;
+}
+
+.product .card-body form{
+   display: flex;
+   gap: 1rem;
+}
+.product .card-body form .qty{
+   width: 8rem;
+   border: var(--border);
+   padding: 1rem;
+   margin-top: 1rem;
+   border-radius: .5rem;
+   font-size: 1.8rem;
+   color: var(--black);
+}*/
+
+
+.menu .container{
+   display: grid;
+  
    gap:1.5rem;
    align-items: flex-start;
    justify-content: center;
 }
 
-.menu .box-container .box{
+.menu .container .row{
+   background-color: var(--white);
+   border-radius: .5rem;
+   padding:2rem;
+   text-align: center;
+   box-shadow: var(--box-shadow);
+   position: relative;
+   
+}
+
+.menu .container .row img{
+   width: 100%;
+   margin-bottom: 1rem;
+}
+
+.menu .container .row .price{
+   background-color: var(--black);
+   border-radius: .5rem;
+   padding:.5rem 1rem;
+   font-size: 1.7rem;
+   color:var(--white);
+   position: absolute;
+   
+}
+
+.menu .container .row .price span{
+   font-size: 2.5rem;
+}
+
+.menu .container .row .name{
+   font-size: 2rem;
+   color:var(--black);
+   margin:.5rem 0;
+}
+
+.menu .container .row form{
+   display: flex;
+   gap:1rem;
+}
+.menu.container .row form .btn:hover{
+   background-color: var(--light-color);
+   color: var(--white);
+}
+
+.menu .container .row form .qty{
+   width: 8rem;
+   border:var(--border);
+   padding:1rem;
+   margin-top: 1rem;
+   border-radius: .5rem;
+   font-size: 1.8rem;
+   color:var(--black);
+}
+
+
+/*.container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 35rem);
+   gap:1.5rem;
+   align-items: flex-start;
+   justify-content: center;
+   width: auto;
+}
+
+.container .row{
    background-color: var(--white);
    border-radius: .5rem;
    padding:2rem;
@@ -300,12 +434,12 @@ section{
    position: relative;
 }
 
-.menu .box-container .box img{
+.image img{
    width: 100%;
    margin-bottom: 1rem;
 }
 
-.menu .box-container .box .price{
+.price{
    background-color: var(--black);
    border-radius: .5rem;
    padding:.5rem 1rem;
@@ -315,22 +449,22 @@ section{
    top:1rem; left:1rem;
 }
 
-.menu .box-container .box .price span{
+.price span{
    font-size: 2.5rem;
 }
 
-.menu .box-container .box .name{
+.container .row .name{
    font-size: 2rem;
    color:var(--black);
    margin:.5rem 0;
 }
 
-.menu .box-container .box form{
+.container .row form{
    display: flex;
    gap:1rem;
 }
 
-.menu .box-container .box form .qty{
+.container .row form .qty{
    width: 8rem;
    border:var(--border);
    padding:1rem;
@@ -338,7 +472,7 @@ section{
    border-radius: .5rem;
    font-size: 1.8rem;
    color:var(--black);
-}
+}*/
 
 .order form{
    background-color: var(--white);
