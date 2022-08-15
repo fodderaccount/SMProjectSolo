@@ -29,6 +29,12 @@ class FrontendController extends Controller
             return redirect('/');
         }
     }
+    public function detail($id)
+    {
+        $products=Product::find($id);
+        return view('client.detail',compact('products') ) ;
+    }
+
 
     
     public function about()
