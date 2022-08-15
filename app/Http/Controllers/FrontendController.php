@@ -11,23 +11,23 @@ class FrontendController extends Controller
     {
         $product = Product::all();
 
-        return view('client.pages.index', compact('product'));
+        return view('client.index', compact('product'));
     }
     public function about()
     {
-        return view('client.pages.about');
+        return view('client.about');
     }
     public function menu()
     {
-        return view('client.pages.menu');
+        return view('client.menu');
     }
     public function order()
     {
-        return view('client.pages.order');
+        return view('client.order');
     }
     public function faq()
     {
-        return view('client.pages.faq');
+        return view('client.faq');
     }
     
 }
