@@ -80,18 +80,24 @@
         </li>            
                 
         <!-- Nav Item - Users -->
-        <li class="nav-item {{ Nav::isRoute('users') }}">
-            <a class="nav-link" href="">
+        <li class="nav-item {{ Nav::isRoute('user') }}">
+            <a class="nav-link" href="{{route('users.index')}}">
                 <i class="fas fa-fw fa-hands-helping"></i>
-                <span>{{ __('Users') }}</span>
+                <span>{{ __('User') }}</span>
             </a>
         </li>
 
         <!-- Nav Item - Users -->
         <li class="nav-item {{ Nav::isRoute('product') }}">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="{{route('products.index')}}">
                 <i class="fas fa-fw fa-hands-helping"></i>
                 <span>{{ __('Product') }}</span>
+            </a>
+        </li>
+        <li class="nav-item {{ Nav::isRoute('slider') }}">
+            <a class="nav-link" href="{{route('sliders.index')}}">
+                <i class="fas fa-fw fa-hands-helping"></i>
+                <span>{{ __('Slider') }}</span>
             </a>
         </li>
 

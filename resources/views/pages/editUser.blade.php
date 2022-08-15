@@ -4,7 +4,7 @@
     <div class="col-xs-12 col-md-12 col-lg-12">
         
         <div class="panel panel-primary">
-            <div class="panel-heading"><h1>Add Category</h1></div>
+            <div class="panel-heading"><h1>Edit Role</h1></div>
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <strong>Whoops!</strong> There were some problems with your input!
@@ -17,24 +17,18 @@
                 </div>
             @endif
             <div class="panel-body">
-                    
-                <form  method="post" action="{{route('categories.add')}}" enctype="multipart/form-data">
+                <form action="" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row" style="margin-bottom:40px">
                         <div class="col-xs-8">
                             <div class="form-group" >
-                                <label>Name</label>
-                                <input required type="text" name="name" class="form-control" placeholder="Name" style="width: 150%">
-                            </div>                                    
-                            <div class="form-group" >
-                                <label>Description</label><br>
-                                <textarea required name="description" style="width: 150%"></textarea>
-                                
+                                <label>Role</label>
+                                <input required type="text" name="role" class="form-control" style="width: 150%" value="{{ $user->role }}">
                             </div>
                             
-                            
+                
                             <input type="submit" name="submit" value="OK" class="btn btn-primary">
-                            <a href="{{route('categories.index')}}" class="btn btn-danger">Cancel</a>
+                            <a href="{{route('users.index')}}" class="btn btn-danger">Cancel</a>
                         </div>
                     </div>
                 </form>

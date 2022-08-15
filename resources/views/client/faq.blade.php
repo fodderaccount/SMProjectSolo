@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-@extends('client.include.default')
-=======
-@extends('client.layouts.master')
->>>>>>> main
 
+@extends('client.layouts.master')
+  
 @section('content')
 
 
