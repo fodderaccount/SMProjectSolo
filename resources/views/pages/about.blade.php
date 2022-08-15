@@ -40,8 +40,8 @@
 
                     <div class="row">
                         <div class="col-lg-12">
-                            <h5 class="font-weight-bold">Laravel SB Admin 2</h5>
-                            <p>SB Admin 2 for Laravel.</p>
+                            <h5 class="font-weight-bold">PIZZA</h5>
+                            <p>PIZZA manage for Laravel.</p>
                             <a href="https://github.com/fodderaccount/SMProjectSolo" target="_blank" class="btn btn-github">
                                 <i class="fab fa-github fa-fw"></i> Go to repository
                             </a>
