@@ -30,6 +30,7 @@ use App\Http\Controllers\UserController;
     Route::get('/', [FrontendController::class, 'index'])->name('client.index');
     
     Route::get('viewCategory/{name}',[FrontendController::class, 'viewCategory'])->name('client.category');
+    Route::get('detail/{id}',[FrontendController::class, 'detail']) -> name('client.detail');
 
     Route::get('/about.', [FrontendController::class, 'about'])->name('client.about');
     Route::get('/menu', [FrontendController::class, 'menu'])->name('client.menu');
