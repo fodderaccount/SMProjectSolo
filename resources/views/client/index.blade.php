@@ -6,6 +6,7 @@
 <section id="menu" class="menu">
 
 
+
    <h1 class="heading">all Pizza</h1>
 
    <div class="container">
@@ -18,7 +19,7 @@
                <div class="price">$<span>{{$prod->price}}</span></div>
                <img src="uploads/img/{{$prod->image}}" alt="">
                <div class="name">{{$prod->name}}</div>
-               <form action="" method="post">
+               <form action="{{ route('add.to.cart', $prod->id) }}" method="get">
                   <input type="number" min="1" max="100" value="1" class="qty" name="qty">
                   <input type="submit" value="add to cart" name="add_to_cart" class="btn">
                </form>
@@ -34,17 +35,7 @@
 
 </section>
 
-<<<<<<< HEAD
-       
-       
- 
-    
- 
- 
-=======
 
->>>>>>> 1d02c40be31d808dd3488f80dbc59fcb61126c4a
- 
  <!-- menu section ends -->
 
  @endsection
