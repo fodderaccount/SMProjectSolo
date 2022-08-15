@@ -34,7 +34,16 @@
 
 </section>
 
+<<<<<<< HEAD
+       
+       
+ 
+    
+ 
+ 
+=======
 
+>>>>>>> 1d02c40be31d808dd3488f80dbc59fcb61126c4a
  
  <!-- menu section ends -->
 

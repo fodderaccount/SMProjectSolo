@@ -27,6 +27,9 @@ use App\Http\Controllers\UserController;
 
 /*Route::group(['prefix'=>'client'], function(){*/
     Route::get('/', [FrontendController::class, 'index'])->name('client.index');
+    
+    Route::get('viewCategory/{name}',[FrontendController::class, 'viewCategory'])->name('client.category');
+
     Route::get('/about.', [FrontendController::class, 'about'])->name('client.about');
     Route::get('/menu', [FrontendController::class, 'menu'])->name('client.menu');
     Route::get('/order', [FrontendController::class, 'order'])->name('client.order');
