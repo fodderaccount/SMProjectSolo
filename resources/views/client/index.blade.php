@@ -36,7 +36,6 @@
 </section>
 
 
-
  <!-- menu section ends -->
 
  @endsection
