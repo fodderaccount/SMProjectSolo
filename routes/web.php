@@ -27,6 +27,11 @@ use App\Http\Controllers\UserController;
 
 /*Route::group(['prefix'=>'client'], function(){*/
     Route::get('/', [FrontendController::class, 'index'])->name('client.index');
+    Route::get('/about.', [FrontendController::class, 'about'])->name('client.about');
+    Route::get('/menu', [FrontendController::class, 'menu'])->name('client.menu');
+    Route::get('/order', [FrontendController::class, 'order'])->name('client.order');
+    Route::get('/faq', [FrontendController::class, 'faq'])->name('client.faq');
+    
     Route::get('/login', [LoginController::class, 'authenticated'])->name('login');
 
 
