@@ -1,5 +1,6 @@
-@extends('client.layouts.master')
 
+@extends('client.layouts.master')
+  
 @section('content')
 
 

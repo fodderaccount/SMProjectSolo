@@ -3,6 +3,7 @@
 @section('content')
 
 <!-- menu section starts  -->
+
 <section id="menu" class="menu">
 
 
@@ -34,6 +35,7 @@
    </div>
 
 </section>
+
 
 
  <!-- menu section ends -->
