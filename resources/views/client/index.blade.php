@@ -33,21 +33,12 @@
 
 </section>
 
-       <!--<div class="box">
-          <div class="price">$<span>4</span>/-</div>
-          <img src="client/images/pizza-2.jpg" alt="">
-          <div class="name">pizza 2</div>
-          <form action="" method="post">
-             <input type="number" min="1" max="100" value="1" class="qty" name="qty">
-             <input type="submit" value="add to cart" name="add_to_cart" class="btn">
-          </form>
-       </div>
-      -->
+       
        
  
     
  
- </section>
+ 
  
  <!-- menu section ends -->
 

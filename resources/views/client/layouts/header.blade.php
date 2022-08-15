@@ -11,9 +11,13 @@
           <div class="dropdown">
             <button class="dropbtn"><a>category</a></button>
             <div class="category-content">
-              <a href="#">italian pizza</a>
-              <a href="#">american pizza</a>
-              <a href="#">german pizza</a>
+               
+                  @foreach(App\Models\Category::all() as $cat)
+                  <a href="{{url('viewCategory/'.$cat->name)}}">
+                  <li class="option" value="{{$cat->id}}">{{$cat->name}}</li>
+                  </a>
+                  @endforeach
+               
             </div>
           </div>
           <a href="{{route('client.about')}}">about</a>
