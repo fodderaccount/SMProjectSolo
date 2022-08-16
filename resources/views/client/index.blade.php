@@ -19,7 +19,7 @@
                   <img src="uploads/img/{{$prod->image}}" alt="">
                   <div class="name">{{$prod->name}}</div>
                </a>
-               <form action="" method="post">
+               <form action="{{ route('add.to.cart', $prod->id) }}" method="get">
                   <input type="number" min="1" max="100" value="1" class="qty" name="qty">
                   <input type="submit" value="add to cart" name="add_to_cart" class="btn">
                </form>
